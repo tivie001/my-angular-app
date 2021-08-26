@@ -1,0 +1,37 @@
+<!--------- String Interpolation --------->
+<div class="card card-body">
+  <div class="accordion">
+    <h3 class="title" (click)="opened = !opened">String Interpolation</h3>
+    <hr>
+    <div class="content-container" [class.opened]="opened">
+      <div class="content">
+        <ul>
+          <li>Use brackets to output an interpolated string (<code>{{ exampleString }}</code> syntax)</li>
+          <li>The following data is displayed using the code below: </li>
+        </ul>
+        <br>
+        <h5>Input</h5>
+        <h6>string-inter-comp.ts</h6>
+        <div class="code-example">
+          <pre>
+              <code>
+exampleString = "This is an example"
+playerId = 12;
+playerStatus = "Active";
+getPlayerStatus();
+return this.playerStatus;
+              </code>
+            </pre>
+        </div>
+        <br>
+        <h6>string-inter.comp.html</h6>
+        <div class="code-example">
+          <pre><code>{{ codedString }} </code></pre>
+        </div>
+        <hr>
+        <h5>Output</h5>
+        <pre><code>{{ 'Player' }} with jersey #{{ playerId }} is {{ getPlayerStatus() }} </code></pre>
+      </div>
+    </div>
+  </div>
+</div>

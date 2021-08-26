@@ -1,0 +1,10 @@
+<div class="row card card-body bg-dark text-white assign-accordion">
+    <h5 (click)="assignmentsOpened = !assignmentsOpened">ASSIGNMENT #1 - Components</h5>
+    <div class="content-container" [class.opened]="assignmentsOpened">
+        <div class="col-xs-12 alert alert-success" role="alert">
+            <h4><strong>Successful!</strong></h4>
+            <p>Your changes have been saved.</p>
+        </div>
+        <warning-alert-comp></warning-alert-comp>
+    </div>
+</div>

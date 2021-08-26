@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+body {
+  background-color: #eee;
+}
+.accordion {
+    /* box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); */
+    margin: 12px 12px 12px 0;
+}
+.title {
+    opacity: 1;
+    transition: .5s;
+    color: #f7b900;
+}
+.title:hover {
+    cursor: pointer;
+    opacity: .5;
+    transition: .5s;
+}
+.content-container {
+  overflow: hidden;
+  max-height: 0;
+}
+.content-container.opened {
+  max-height: none;
+} 
+.code-example {
+    background-color: #eee;
+    padding: 10px;
+    font-family: 'Source Code Pro', monospace;
+}
+.assign-accordion h5 {
+  opacity: 1;
+}
+.assign-accordion h5:hover {
+  opacity: .5;
+  transition: .5s;
+  cursor: pointer;
+}
+.activeStatus {
+  background-color: greenyellow;
+  border: 1px solid green;
+  padding: 5px;
+}
+.inactiveStatus {
+  background-color: pink;
+  border: 1px solid red;
+  padding: 5px;
+}
+.text-red {
+  color: red;
+}

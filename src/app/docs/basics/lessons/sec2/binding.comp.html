@@ -1,0 +1,86 @@
+<div class="card card-body card-section">
+  <div class="accordion">
+    <h3 class="title" (click)="opened= !opened">Binding</h3>
+    <hr>
+    <div class="content-container" [class.opened]="opened">
+      <div class="content">
+        <h4>Property Binding</h4>
+        <ul>
+          <li>Can be used very similar to string interpolation but in a different syntactical way (see below):</li>
+        </ul>
+        <br>
+        <h5>Input</h5>
+        <h6>binding.comp.html</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+{{ propertyBind }}
+            </code>
+          </pre>
+        </div>
+        <hr>
+        <h5>Output</h5>
+        <pre><code><p [innerText]="playerStatus"></p></code></pre>
+        <hr>
+        <h4>Event Binding</h4>
+        <ul>
+          <li>Can fire an event provided by Angular.</li>
+        </ul>
+        <br>
+        <h6>binding-comp.ts</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+onCreate(() => &#123; 
+// DO SOMETHING
+&#125;)
+            </code>
+          </pre>
+        </div>
+        <h6>binding.comp.html</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+{{ eventBind }}
+            </code>
+          </pre>
+        </div>
+        <hr>
+        <h4>Two-Way-Databinding</h4>
+        <ul>
+          <li>A way of binding two items together (i.e. input and text) and reacting two event in both directions.</li>
+        </ul>
+        <br>
+        <h5>Input</h5>
+        <h6>binding-comp.ts</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+playerName = '';
+onUpdatePlayerName((event: Event) => &#123; 
+this.playerName = (HTMLInputElement(type) event.target).value;
+&#125;)
+            </code>
+          </pre>
+        </div>
+        <h6>binding.comp.html</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+{{ twoWayBind }}
+            </code>
+          </pre>
+        </div>
+        <hr>
+        <h5>Output</h5>
+        <form> 
+          <label for="playerName">Enter a player name:</label>
+          <br>
+          <input type="text" name="playerName" (input)="onUpdatePlayerName($event)" /><br>
+          <p><strong>Player Name:</strong> {{ playerName }}</p>
+          <input class="btn btn-secondary" type="reset" value="Reset" [disabled]="!playerName" (click)="playerName = ''"> 
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

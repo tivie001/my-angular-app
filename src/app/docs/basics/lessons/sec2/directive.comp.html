@@ -1,0 +1,56 @@
+<div class="card card-body card-section">
+  <div class="accordion">
+    <h3 class="title" (click)="opened = !opened">Directives</h3>
+    <hr>
+    <div class="content-container" [class.opened]="opened">
+      <div class="content">
+        <ul>
+          <li>Instructions in the DOM</li>
+          <li>Components are directives with a template</li>
+          <li>(i.e. appTurnGreen on an HTML element)</li>
+          <li>a good example of a directive is a <strong><i>ngIf</i></strong></li>
+          <li>Examples:</li>
+          <ul>
+            <code>
+              <li>{{ ngIf }}</li>
+              <li>{{ ngStyle }}</li>
+              <li>{{ ngClass }}</li>
+              <li>{{ ngFor }}</li>
+              <p *ngFor="let player of players">{{player}}</p>
+            </code>
+          </ul>
+        </ul>
+        <br>
+        <h5>Input</h5>
+        <h6>directive-comp.ts</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+playerActive = true;
+            </code>
+          </pre>
+        </div>
+        <h6>directive.comp.html</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+{{ngIfString}}
+            </code>
+          </pre>
+        </div>
+        
+        <hr>
+        <h5>Output</h5>
+        <div>
+          Player is:
+          <span class="inactiveStatus" *ngIf="playerActive; else notActive">Inactive</span>
+          <ng-template #notActive>
+            <span class="activeStatus">Active</span>
+          </ng-template> 
+        </div>
+        <br>
+        <button class="btn btn-primary" (click)="playerActive = !playerActive">Toggle Player Status</button>
+        <hr>
+      </div>
+    </div>
+  </div>

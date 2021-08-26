@@ -1,0 +1,8 @@
+<div class="row card card-body bg-dark text-white assign-accordion">
+    <h5 (click)="opened = !opened">ASSIGNMENT #3 - Directives</h5>
+    <div class="content-container" [class.opened]="opened">
+        <button class="btn btn-info" type="button" (click)="showDisplayDetails()">Display Details</button>
+        <p *ngIf="displayDetails">Secret Password = {{ secretPass }}</p>
+        <div *ngFor="let time of logs; let i = index" [ngClass]="{'text-red': i >= 4}" [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}">{{time}}</div>
+    </div>
+</div>
