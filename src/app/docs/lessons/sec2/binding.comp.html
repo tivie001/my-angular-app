@@ -80,6 +80,25 @@ this.playerName = (HTMLInputElement(type) event.target).value;
           <p><strong>Player Name:</strong> {{ playerName }}</p>
           <input class="btn btn-secondary" type="reset" value="Reset" [disabled]="!playerName" (click)="playerName = ''"> 
         </form>
+        <hr>
+        <h4>Custom Property Binding</h4>
+        <h5>Input</h5>
+        <h6>binding-comp.ts</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+{{element}}
+            </code>
+          </pre>
+        </div>
+        <h6>binding.comp.html</h6>
+        <div class="code-example">
+          <pre>
+            <code>
+{{ customBind }}
+            </code>
+          </pre>
+        </div>
       </div>
     </div>
   </div>
