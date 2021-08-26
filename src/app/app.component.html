@@ -7,31 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="header-row">
-      <div class="container">
-        <div class="row">
-          <div class="header-row-text">
-            <img src="../assets/images/Shutter-Aperture.png" title="Tyler\'s Angular Antics logo - camera aperture" height=85/>
-            <h1>{{ title }}</h1>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-header></app-header>
     <div class="container">
-      <br>
-      <success-alert-comp></success-alert-comp>
-      <br>
-      <databind-comp></databind-comp>
-      <br>
-      <directives-comp></directives-comp>
-      <br>
-      <string-inter-comp></string-inter-comp>
-      <br>
-      <bind-comp></bind-comp>
-      <br>
-      <directive-comp></directive-comp>
-      <br>
-      
+      <router-outlet></router-outlet>
     </div>
   </body
 ></html>
