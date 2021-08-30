@@ -1,0 +1,21 @@
+<div class="card card-body card-section">
+    <div class="accordion">
+      <h3 class="title" (click)="opened= !opened">Lifecycle Hooks</h3>
+      <hr>
+      <div class="content-container" [class.opened]="opened">
+        <div class="content">
+          <br>
+          <ul>
+            <li><strong>ngOnChanges</strong> - Called after a bound input property changes</li>
+            <li><strong>ngOnInit</strong> - Called once the component is initialized</li>
+            <li><strong>ngDoCheck</strong> - Called during every change detection run</li>
+            <li><strong>ngAfterContentInit</strong> - Called after content (ng-content) has been projected into view</li>
+            <li><strong>ngAfterContentChecked</strong> - Called every time the projected content has been checked</li>
+            <li><strong>ngAfterViewInit</strong> - Called after the component's view (and child views) has been initialized</li>
+            <li><strong>ngAfterViewChecked</strong> - Called every time the view (and child views) have been checked</li>
+            <li><strong>ngOnDestroy</strong> - Called once the component is about to be destroyed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

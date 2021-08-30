@@ -1,0 +1,7 @@
+<div class="row card card-body bg-dark text-white assign-accordion">
+    <h5 (click)="opened = !opened">ASSIGNMENT #4 - Game Control</h5>
+    <div class="content-container" [class.opened]="opened">
+        <button class="btn btn-success" (click)="startGame()">Start</button>
+        <button class="btn btn-danger" (click)="stopGame()">Pause</button>        
+    </div>
+</div>

@@ -15,6 +15,10 @@ export class BindComp {
     opened = false;
     playerStatus = "Active";
     playerName = '';
+    emitter = "playerCreated = new EventEmitter<{playerName: string, jerseyNum: number}>();"
+    emitEvent = `this.playerCreated.emit({
+        playerName: this.newPlayerName
+    })`
     onUpdatePlayerName(event: Event) {
         this.playerName = (<HTMLInputElement>event.target).value;
     }

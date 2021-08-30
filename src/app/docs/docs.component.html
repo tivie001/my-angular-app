@@ -1,12 +1,32 @@
-<br>
-<success-alert-comp></success-alert-comp>
-<br>
-<databind-comp></databind-comp>
-<br>
-<directives-comp></directives-comp>
-<br>
-<string-inter-comp></string-inter-comp>
-<br>
-<bind-comp></bind-comp>
-<br>
-<directive-comp></directive-comp>
+<div class="row">
+    <div class="col-lg-8">
+        <br>
+        <string-inter-comp></string-inter-comp>
+        <br>
+        <bind-comp></bind-comp>
+        <br>
+        <directive-comp></directive-comp>
+        <br>
+        <local-ref-comp></local-ref-comp>
+        <br>
+        <lifecycles-comp></lifecycles-comp>
+    </div>
+    <div class="col-lg-4">
+        <br>
+        <success-alert-comp></success-alert-comp>
+        <br>
+        <databind-comp></databind-comp>
+        <br>
+        <directives-comp></directives-comp>
+        <br>
+        <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+        <div class="bg-dark">
+            <app-odd *ngFor="let odd of oddNums" [num]="odd"></app-odd>
+            <app-even *ngFor="let even of evenNums" [num]="even"></app-even>
+        </div>
+        
+    </div>
+</div>
+
+
+
