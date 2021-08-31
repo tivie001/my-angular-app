@@ -9,8 +9,7 @@ export class EvenComponent implements OnInit {
   @Input() num: number|undefined;
 
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
 }

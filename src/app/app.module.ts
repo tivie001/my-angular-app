@@ -58,8 +58,9 @@ const appRoutes: Routes = [
     BrowserModule, 
     RouterModule.forRoot(appRoutes)
   ],
+  exports: [RouterModule],
   providers: [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
