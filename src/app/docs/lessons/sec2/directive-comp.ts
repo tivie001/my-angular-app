@@ -22,4 +22,10 @@ export class DirectiveComp {
     ngStyle = "[ngStyle] = '{backgroundColor: getColor()}'";
     ngClass = "[ngClass] = '{online: serverStatus === 'online'}'";
     ngFor = "*ngFor='let player of players'";
+    ngSwitch = `
+    <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Value is 5</p>
+        <p *ngSwitchCase="10">Value is 10</p>
+        <p *ngSwitchDefault>Value is default</p>
+    </div>`;
 }

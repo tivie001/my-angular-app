@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { HeaderComponent } from '../header/header.component';
+import { Recipe } from './recipe.model';
 
 @Component({
   selector: 'app-recipe-comp',
@@ -8,9 +8,8 @@ import { HeaderComponent } from '../header/header.component';
   styleUrls: ['./recipe.component.css']
 })
 export class RecipeComponent implements OnInit {
-  title = 'Tyler\'s Angular Antics'; 
-  @Output() example: EventEmitter<any> = new EventEmitter();
-
+  title = 'Tyler\'s Angular Antics';  
+  selectedRecipe: Recipe|any;
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 

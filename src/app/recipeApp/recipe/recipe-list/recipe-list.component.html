@@ -4,24 +4,18 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-6">
-        <table class="table table-hover table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Recipes</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let recipe of recipes">
-                <td><img [src]="recipe.imagePath" [alt]="recipe.name" height=100></td>
-                <th>{{recipe.name}}<br><small class="text-desc">{{recipe.description}}</small></th>
-              </tr>
-            </tbody>
-        </table>
-        <app-recipe-item></app-recipe-item>
-    </div>
-    <div class="col-lg-6">
-      <app-recipe-detail></app-recipe-detail>
-    </div>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Recipes</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <app-recipe-item 
+      *ngFor="let recipeEl of recipes" 
+      [recipe]="recipeEl" 
+      (recipeSelected)="onShowRecipeDetail(recipeEl)"></app-recipe-item>
+    </tbody>
+  </table>
 </div>

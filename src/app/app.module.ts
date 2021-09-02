@@ -27,7 +27,8 @@ import { EvenComponent } from './docs/assignments/assign4/even/even.component';
 const appRoutes: Routes = [
   { path: '', component: DocsComponent},
   { path: 'docs', component: DocsComponent },
-  { path: 'recipes', component: RecipeComponent }
+  { path: 'recipes', component: RecipeComponent },
+  { path: 'shopping', component: ShoppingListComponent}
 ]
 
 @NgModule({

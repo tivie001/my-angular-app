@@ -1,1 +1,4 @@
-<p>recipe-item works!</p>
+<tr (click)="showRecipeDetails()">
+    <td><img [src]="recipe.imagePath" [alt]="recipe.name" height=100></td>
+    <th>{{recipe.name}}<br><small class="text-desc">{{recipe.description}}</small></th>
+</tr>
