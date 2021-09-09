@@ -14,8 +14,7 @@
     <tbody>
       <app-recipe-item 
       *ngFor="let recipeEl of recipes" 
-      [recipe]="recipeEl" 
-      (recipeSelected)="onShowRecipeDetail(recipeEl)"></app-recipe-item>
+      [recipe]="recipeEl"></app-recipe-item>
     </tbody>
   </table>
 </div>
